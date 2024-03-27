@@ -16,15 +16,17 @@ def main():
     new_df_one_day = new_df[new_df['Time1'] >= '2024-03-25']
 
     st.title('full days')
-    st.write("blue - FinishedSuccess")
-    st.write("green - Skipped")
-    st.write("red - FinishedFail")
+    
+
     
     # Загрузка изображения
     image_path = 'my_plot.png'
     st.image(image_path, use_column_width=True)
 
     st.title('one day')
+    st.write("blue - FinishedSuccess")
+    st.write("green - Skipped")
+    st.write("red - FinishedFail")
     # Вывод графика
     fig = px.line(new_df_one_day, x="AppName", y="Time1", color='Status', symbol="a")
     fig.update_layout(width=3000, height=800)
