@@ -7,9 +7,9 @@ import plotly.express as px
 def main():
     
     # Загрузка данных
-    df1 = pd.read_excel('C:/Users/User/Desktop/test_pril/df1.xlsx')    
+    df1 = pd.read_excel('df1.xlsx')    
 
-    df2 = pd.read_excel('C:/Users/User/Desktop/test_pril/df2.xlsx')    
+    df2 = pd.read_excel('df2.xlsx')    
     # Фильтрация данных по дате
     new_df = pd.concat([df1, df2])
     new_df0 = new_df[new_df['Time1'] >= '2024-03-18']
@@ -21,7 +21,7 @@ def main():
     st.title('full days')
 
     # Загрузка изображения
-    image_path = 'C:/Users/User/Desktop/test_pril/my_plot.png'
+    image_path = 'my_plot.png'
     st.image(image_path, use_column_width=True)
 
     st.title('one day')
