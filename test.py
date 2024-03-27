@@ -15,9 +15,6 @@ def main():
     new_df0 = new_df[new_df['Time1'] >= '2024-03-18']
     new_df_one_day = new_df[new_df['Time1'] >= '2024-03-25']
 
-    st.subheader(st.__version__)
-    st.subheader(pd.__version__)
-    st.subheader(plotly.__version__)
     st.title('full days')
 
     # Загрузка изображения
