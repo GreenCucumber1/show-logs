@@ -35,5 +35,13 @@ def main():
 
     st.plotly_chart(fig)
 
+    df5 = pd.read_excel('df5.xlsx')
+    df5 = df5[df5['start'] >= '2024-03-25']
+    color_map = {'FinishedSuccess': 'blue', 'FinishedFail': 'red', 'Skipped': 'yellow'}
+
+    fig = px.timeline(df5, x_start="start", x_end="end", y="AppName",color = 'Status',color_discrete_map=color_map)
+    fig.update_layout(width=1000, height=1600)
+    st.plotly_chart(fig)
+
 if __name__ == "__main__":
     main()
