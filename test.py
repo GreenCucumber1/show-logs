@@ -25,8 +25,8 @@ def main():
 
     st.title('one day')
     st.write("blue - FinishedSuccess")
-    st.write("green - Skipped")
-    st.write("red - FinishedFail")
+    st.write("light-blue - FinishedFail")
+    st.write("red - Skipped")
     # Вывод графика
     fig = px.line(new_df_one_day, x="AppName", y="Time1", color='Status', symbol="a")
     fig.update_layout(width=3000, height=800)
