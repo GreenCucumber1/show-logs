@@ -30,7 +30,9 @@ def main():
         }
         selection = st.sidebar.radio("Переключиться на:", list(pages.keys()))
         page = pages[selection]
-        page()
+        start_date = st.sidebar.date_input('Выберите начальную дату', value=data['date'].min())
+        end_date = st.sidebar.date_input('Выберите конечную дату', value=data['date'].max())
+        page(start_date, end_date)
 
 
 if __name__ == "__main__":
